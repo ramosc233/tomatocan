@@ -5,6 +5,7 @@ gem 'listen'
 gem 'rails-controller-testing'
 
 gem 'pg'
+gem 'selenium-webdriver'
 #gem 'sqlite3'
 
 gem 'mandrill'	
@@ -22,6 +23,7 @@ gem 'will_paginate-bootstrap'
 gem 'pry'
 gem 'aws-sdk-s3' #aws-s3'
 gem 'aws-sdk'
+gem 'capybara'
 #gem 'event-calendar', :require => 'event_calendar'
 
 gem 'rails', '5.2.1'
@@ -41,8 +43,11 @@ gem 'friendly_id', '~> 5.0.0'
 #gem 'rmagick'
 
 group :test, :development do
+   gem 'simplecov'
+   gem 'simplecov-lcov'
 #  gem 'factory_girl_rails'
-#  gem 'capybara'
+   gem 'capybara'
+   gem 'capybara-screenshot', :group => :test
 #  gem 'mocha', '~> 1.1.0'
 end
 
