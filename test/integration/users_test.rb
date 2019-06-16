@@ -696,6 +696,13 @@ test "Should say email was taken when same user attempts sign up twice" do
         click_on('Create Reward')
         assert_text('Googitygoo')
     end
+    test 'Should lead the user to the edit profile page when clicking the control panel' do
+        signUpUser()
+        signInUser()
+        click_on(text: 'name',:match => :first)
+        click_on(text: 'Control Panel')  	
+        assert_text('Edit Profile')
+    end
     #This test creating a new show needs to be fixed
     # test 'Should create future show from controlpanel' do
     #     signUpUser()
