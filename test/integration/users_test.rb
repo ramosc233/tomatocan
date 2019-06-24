@@ -524,75 +524,25 @@ end
         click_on(text: 'Account')
         assert page.has_field?('user_permalink')
     end
-<<<<<<< HEAD
-    test 'Should create reward from controlpanel rewards page' do
-        signUpUser()
-        signInUser()
-        click_on(text: 'name',:match => :first)
-        click_on(text: 'Control Panel')
-        click_on(text: 'Rewards')
-        click_on('Create Reward')
-        assert_text('Describe this Reward or donation.')#This text appears in the new merchandises page
-    end
-    test 'Should render current buy reward from profileinfo page' do
-        signUpUser()
-        signInUser()
-        click_on(text: 'name',:match => :first)
-        click_on(text: 'Control Panel')
-        click_on(text: 'Rewards')
-        click_on('Create Reward')
-        fill_in(id: 'merchandise_name', with: 'Tickets to My Show')
-        fill_in(id: 'merchandise_price', with: '30')
-        #purchase deadline is currently 2019 July 24
-        click_on(id: 'perkSubmit')
-        assert_text('Tickets to My Show')
-    end
-    test 'Should render current donate reward from profileinfo page' do
-        signUpUser()
-        signInUser()
-        click_on(text: 'name',:match => :first)
-        click_on(text: 'Control Panel')
-        click_on(text: 'Rewards')
-        click_on('Create Reward')
-        select('Donate', from: 'merchandise_buttontype')
-        fill_in(id: 'merchandise_name', with: 'Googitygoo')
-        fill_in(id: 'merchandise_price', with: '30')
-        #purchase deadline is currently 2019 July 24
-        click_on('Create Reward')
-        assert_text('Googitygoo')
-    end
-    test 'Should lead the user to the edit profile page when clicking the control panel' do
-        signUpUser()
-        signInUser()
-        click_on(text: 'name',:match => :first)
-        click_on(text: 'Control Panel')  	
-        assert_text('Edit Profile')
-    end
-    #This test creating a new show needs to be fixed
-    # test 'Should create future show from controlpanel' do
-    #     signUpUser()
-    #     signInUser()
-    #     click_on(text: 'name',:match => :first)
-    #     click_on(text: 'Control Panel')
-    #     click_on(text: 'Shows')
-    #     click_on('Set Up Future Show')
-    #     fill_in(id: 'event_name', with: 'NewShow')
-    #     select('2021', from:'event_end_at_1i')
-    #     #save_and_open_page
-    #     click_on('Post Talk Show')
-    #     #save_and_open_page
-    #     visit ('http://localhost:3000/')
-    #     click_on(id:'calendar-event',:match => :first)
-    #     #save_and_open_page
-    #     assert_text('NewShow')
-
-    # end
-=======
->>>>>>> 10465ab6876140ef5f173d62177c4bc1ae7c038b
     test 'Should render livestream directions from controlpanel' do
         click_on(text: 'Phineas',:match => :first)
         click_on(text: 'Control Panel')
         click_on(text: 'Shows')
         assert_text('Pre-Show Checklist')
     end
+
+
+   #Ramos(personal) added tests
+    test 'Should lead the user to the edit profile page when clicking the control panel' do
+        click_on(text: 'name',:match => :first)
+        click_on(text: 'Control Panel')  	
+        assert_text('Edit Profile')
+    end
+
+    test 'Should open reward page when clicking the link under live show page' do
+   	click_on(text: 'Join Discussion')	#join any discussion
+	click_on(test: 'Donote $5.00!')		#one of the links to reward functions 
+	assert_text('Credit Card Number')	#this should be in the reward purchasing page
+    end
+
 end
