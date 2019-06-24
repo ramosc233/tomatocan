@@ -1,13 +1,23 @@
 source 'http://rubygems.org'
+<<<<<<< HEAD
 ruby "2.6.1"
+=======
+ruby "2.5.3"
+>>>>>>> 10465ab6876140ef5f173d62177c4bc1ae7c038b
 
 gem 'listen'
 gem 'rails-controller-testing'
 
 gem 'pg'
+<<<<<<< HEAD
 gem 'selenium-webdriver'
 #gem 'sqlite3'
 
+=======
+#gem 'sqlite3'
+
+
+>>>>>>> 10465ab6876140ef5f173d62177c4bc1ae7c038b
 gem 'mandrill'	
 gem 'devise'
 gem 'fog'   #, '1.6.0'
@@ -23,7 +33,10 @@ gem 'will_paginate-bootstrap'
 gem 'pry'
 gem 'aws-sdk-s3' #aws-s3'
 gem 'aws-sdk'
+<<<<<<< HEAD
 gem 'capybara'
+=======
+>>>>>>> 10465ab6876140ef5f173d62177c4bc1ae7c038b
 #gem 'event-calendar', :require => 'event_calendar'
 
 gem 'rails', '5.2.1'
@@ -43,12 +56,27 @@ gem 'friendly_id', '~> 5.0.0'
 #gem 'rmagick'
 
 group :test, :development do
+<<<<<<< HEAD
    gem 'simplecov'
    gem 'simplecov-lcov'
 #  gem 'factory_girl_rails'
    gem 'capybara'
    gem 'capybara-screenshot', :group => :test
 #  gem 'mocha', '~> 1.1.0'
+=======
+  gem 'minitest'
+  gem 'simplecov'
+  gem 'simplecov-lcov'
+	#gem 'undercover'
+  gem 'selenium-webdriver'
+#  gem 'factory_girl_rails'
+#  gem 'mocha', '~> 1.1.0'
+  gem 'apparition', '~> 0.2.0'
+  gem 'capybara'
+  gem 'capybara-screenshot', :group => :test
+  gem 'listen'
+  gem 'rails-controller-testing'
+>>>>>>> 10465ab6876140ef5f173d62177c4bc1ae7c038b
 end
 
 group :production do
@@ -84,4 +112,8 @@ end
 
 group :development do
     gem 'rails_real_favicon'
+<<<<<<< HEAD
 end
+=======
+end
+>>>>>>> 10465ab6876140ef5f173d62177c4bc1ae7c038b
