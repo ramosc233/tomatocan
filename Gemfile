@@ -5,11 +5,8 @@ gem 'listen'
 gem 'rails-controller-testing'
 
 gem 'pg'
-
 gem 'selenium-webdriver'
 #gem 'sqlite3'
-
-
 
 gem 'mandrill'	
 gem 'devise'
@@ -27,7 +24,6 @@ gem 'pry'
 gem 'aws-sdk-s3' #aws-s3'
 gem 'aws-sdk'
 gem 'capybara'
-
 #gem 'event-calendar', :require => 'event_calendar'
 
 gem 'rails', '5.2.1'
@@ -53,18 +49,6 @@ group :test, :development do
    gem 'capybara'
    gem 'capybara-screenshot', :group => :test
 #  gem 'mocha', '~> 1.1.0'
-  gem 'minitest'
-  gem 'simplecov'
-  gem 'simplecov-lcov'
-	#gem 'undercover'
-  gem 'selenium-webdriver'
-#  gem 'factory_girl_rails'
-#  gem 'mocha', '~> 1.1.0'
-  gem 'apparition', '~> 0.2.0'
-  gem 'capybara'
-  gem 'capybara-screenshot', :group => :test
-  gem 'listen'
-  gem 'rails-controller-testing'
 end
 
 group :production do
@@ -101,5 +85,3 @@ end
 group :development do
     gem 'rails_real_favicon'
 end
-
-
