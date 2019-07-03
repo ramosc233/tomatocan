@@ -16,7 +16,7 @@ test "Should_see_edit_profile_in_control_panel" do
     click_on(class: 'dropdown-toggle')
     click_on('Control Panel')
     
-    page.has_css?('.col-xs-12')
+    page.has_css?("#saveProfileButton:enabled")
 end
 
 test "Should_view_profileinfo" do
