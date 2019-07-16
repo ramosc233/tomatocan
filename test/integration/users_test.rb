@@ -26,7 +26,7 @@ end
 
 
 
-##unchaged below
+#################unchanged below
 
 #test "Should_view_profileinfo" do
 #    click_on('Discover Talk Show Hosts')
@@ -549,7 +549,7 @@ end
     end
 
 
-   #Ramos(personal) added tests
+   ########################
     test 'Should lead the user to the edit profile page when clicking the control panel' do
         click_on(text: 'name',:match => :first)
         click_on(text: 'Control Panel')  	
